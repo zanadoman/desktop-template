@@ -27,6 +27,10 @@ const createWindow = () => {
   }
 };
 
+if (require('electron-squirrel-startup')) {
+  app.quit();
+}
+
 app.whenReady().then(() => {
   createWindow();
 
